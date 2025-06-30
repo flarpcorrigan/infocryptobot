@@ -98,40 +98,38 @@ async def status_command(update, context):
 async def ping_command(update, context):
     """Проверяет доступность API Binance и CoinGecko"""
     try:
-        async with aiohttp.ClientSession(
-            connector=aiohttp.TCPConnector(ssl=False)
-        ) as session:
+        async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False)) as session:
             # Проверка Binance
             binance_ping = None
             try:
-                async with session.get(
-                    f"{config.BINANCE_API_URL}/time", timeout=10
-                ) as r:
+                async with session.get(f"{config.BINANCE_API_URL}/time", timeout=10) as r:
                     if r.status == 200:
                         server_time = (await r.json())["serverTime"] / 1000
-                        binance_time = datetime.fromtimestamp(
-                            server_time, tz=timezone.utc
-                        )
+                        binance_time = datetime.fromtimestamp(server_time, tz=timezone.utc)
                         binance_ping = f"🟢 Binance: {utils.format_time(binance_time)}"
                     else:
-                        binance_ping = "🔴 Binance недоступен"
+                        binance_ping = f"🔴 Binance: {r.status}"
             except Exception as e:
                 binance_ping = f"🔴 Binance: {str(e)}"
 
-            # Проверка CoinGecko
+            # Проверка CoinGecko (реальный эндпоинт)
             coingecko_ping = None
             try:
-                async with session.get(
-                    "https://api.coingecko.com/api/v3/ping ", timeout=10
-                ) as r:
+                url = " https://api.coingecko.com/api/v3/coins/markets "
+                params = {"vs_currency": "usd", "per_page": 1}
+                async with session.get(url, params=params, timeout=10) as r:
                     if r.status == 200:
-                        coingecko_ping = "🟢 CoinGecko: доступен"
+                        data = await r.json()
+                        if isinstance(data, list) and len(data) > 0:
+                            coingecko_ping = "🟢 CoinGecko: доступен"
+                        else:
+                            coingecko_ping = "🔴 CoinGecko: пустой ответ"
                     else:
                         coingecko_ping = f"🔴 CoinGecko: {r.status}"
             except Exception as e:
                 coingecko_ping = f"🔴 CoinGecko: {str(e)}"
 
-            # Собрать результат
+            # Отправляем результат
             message = f"""
 📡 <b>Результат диагностики</b>
 
@@ -140,8 +138,8 @@ async def ping_command(update, context):
 
 🕒 Время сервера: {utils.get_local_time_str()}
 """
-            await update.message.reply_text(message, parse_mode="HTML")
-
+            await update.message.reply_text(message, parse_mode='HTML')
+    
     except Exception as e:
         logger.error(f"Ошибка при выполнении /ping: {e}")
         await update.message.reply_text("❌ Не удалось выполнить диагностику.")

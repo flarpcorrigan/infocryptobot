@@ -1,33 +1,15 @@
-2025-06-30 22:42:26 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2025-06-30 22:42:26 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2025-06-30 22:42:26 - INFO - Бот запущен
-2025-06-30 22:42:26 - INFO - Added job "check_price_changes" to job store "default"
-2025-06-30 22:42:26 - INFO - Added job "generate_hourly_top" to job store "default"
-2025-06-30 22:42:26 - INFO - Scheduler started
-2025-06-30 22:42:26 - INFO - Application started
-2025-06-30 22:42:36 - INFO - Running job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 19:57:36 UTC)" (scheduled at 2025-06-30 19:42:36.709564+00:00)
-2025-06-30 22:42:36 - INFO - Проверка цен на криптовалюты...
-2025-06-30 22:42:36 - INFO - Запрос к CoinGecko (страница 1)
-2025-06-30 22:42:37 - INFO - Запрос к CoinGecko (страница 2)
-2025-06-30 22:42:38 - INFO - Запрос к CoinGecko (страница 3)
-2025-06-30 22:43:15 - INFO - Job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 19:57:36 UTC)" executed successfully
-2025-06-30 22:43:26 - INFO - Running job "generate_hourly_top (trigger: interval[1:00:00], next run at: 2025-06-30 20:43:26 UTC)" (scheduled at 2025-06-30 19:43:26.710125+00:00)
-2025-06-30 22:43:26 - INFO - Job "generate_hourly_top (trigger: interval[1:00:00], next run at: 2025-06-30 20:43:26 UTC)" executed successfully
-2025-06-30 22:44:42 - INFO - Application is stopping. This might take a moment.
-2025-06-30 22:44:42 - INFO - Scheduler has been shut down
-2025-06-30 22:44:42 - INFO - Application.stop() complete
-2025-06-30 22:45:20 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2025-06-30 22:45:20 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2025-06-30 22:45:20 - INFO - Бот запущен
-2025-06-30 22:45:20 - INFO - Added job "check_price_changes" to job store "default"
-2025-06-30 22:45:20 - INFO - Added job "generate_hourly_top" to job store "default"
-2025-06-30 22:45:20 - INFO - Scheduler started
-2025-06-30 22:45:20 - INFO - Application started
-2025-06-30 22:45:30 - INFO - Running job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 20:00:30 UTC)" (scheduled at 2025-06-30 19:45:30.259323+00:00)
-2025-06-30 22:45:30 - INFO - Проверка цен на криптовалюты...
-2025-06-30 22:45:30 - INFO - Запрос к CoinGecko (страница 1)
-2025-06-30 22:45:30 - INFO - Запрос к CoinGecko (страница 2)
-2025-06-30 22:45:31 - INFO - Запрос к CoinGecko (страница 3)
-2025-06-30 22:46:08 - INFO - Job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 20:00:30 UTC)" executed successfully
-2025-06-30 22:46:20 - INFO - Running job "generate_hourly_top (trigger: interval[1:00:00], next run at: 2025-06-30 20:46:20 UTC)" (scheduled at 2025-06-30 19:46:20.259826+00:00)
-2025-06-30 22:46:20 - INFO - Job "generate_hourly_top (trigger: interval[1:00:00], next run at: 2025-06-30 20:46:20 UTC)" executed successfully
+2025-06-30 22:56:02 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-30 22:56:02 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-30 22:56:02 - INFO - Бот запущен
+2025-06-30 22:56:02 - INFO - Added job "check_price_changes" to job store "default"
+2025-06-30 22:56:02 - INFO - Added job "generate_hourly_top" to job store "default"
+2025-06-30 22:56:02 - INFO - Scheduler started
+2025-06-30 22:56:02 - INFO - Application started
+2025-06-30 22:56:12 - INFO - Running job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 20:11:12 UTC)" (scheduled at 2025-06-30 19:56:12.327890+00:00)
+2025-06-30 22:56:12 - INFO - Проверка цен на криптовалюты...
+2025-06-30 22:56:12 - INFO - Запрос к CoinGecko (страница 1)
+2025-06-30 22:56:12 - INFO - Запрос к CoinGecko (страница 2)
+2025-06-30 22:56:12 - INFO - Запрос к CoinGecko (страница 3)
+2025-06-30 22:56:51 - INFO - Job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 20:11:12 UTC)" executed successfully
+2025-06-30 22:57:02 - INFO - Running job "generate_hourly_top (trigger: interval[1:00:00], next run at: 2025-06-30 20:57:02 UTC)" (scheduled at 2025-06-30 19:57:02.328506+00:00)
+2025-06-30 22:57:02 - INFO - Job "generate_hourly_top (trigger: interval[1:00:00], next run at: 2025-06-30 20:57:02 UTC)" executed successfully
