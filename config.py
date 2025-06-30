@@ -6,3 +6,4 @@ BINANCE_API_URL = "https://api.binance.com/api/v3"
 CHECK_INTERVAL_MINUTES = 15      # Проверка цен каждые N минут
 HOURLY_INTERVAL_MINUTES = 60    # Отправка топа каждые N минут
 PRICE_CHANGE_THRESHOLD = 1.5    # 1.5%
+TIMEZONE = "Europe/Moscow"
