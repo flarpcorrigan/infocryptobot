@@ -1,90 +1,33 @@
-
-Бот запущен. Ожидание команд и проверка цен...
-Adding job tentatively -- it will be properly scheduled when the scheduler starts
-Adding job tentatively -- it will be properly scheduled when the scheduler starts
-Бот запущен
-Added job "check_price_changes" to job store "default"
-Added job "generate_hourly_top" to job store "default"
-Scheduler started
-Application started
-Running job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 09:31:11 UTC)" (scheduled at 2025-06-30 09:16:11.743095+00:00)
-Проверка цен на криптовалюты...
-Running job "generate_hourly_top (trigger: interval[1:00:00], next run at: 2025-06-30 10:17:01 UTC)" (scheduled at 2025-06-30 09:17:01.743660+00:00)
-Job "generate_hourly_top (trigger: interval[1:00:00], next run at: 2025-06-30 10:17:01 UTC)" executed successfully
-Игнорируем монету asonusdc — нет пары ASONUSDCUSDT
-Job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 09:31:11 UTC)" executed successfully
-Application is stopping. This might take a moment.
-Scheduler has been shut down
-Application.stop() complete
-2025-06-30 12:24:55 - INFO - Бот запущен
-2025-06-30 12:24:55 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2025-06-30 12:24:55 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2025-06-30 12:24:55 - INFO - Бот запущен
-2025-06-30 12:24:55 - INFO - Added job "check_price_changes" to job store "default"
-2025-06-30 12:24:55 - INFO - Added job "generate_hourly_top" to job store "default"
-2025-06-30 12:24:55 - INFO - Scheduler started
-2025-06-30 12:24:55 - INFO - Application started
-2025-06-30 12:25:05 - INFO - Running job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 09:40:05 UTC)" (scheduled at 2025-06-30 09:25:05.839932+00:00)
-2025-06-30 12:25:05 - INFO - Проверка цен на криптовалюты...
-2025-06-30 12:25:55 - INFO - Running job "generate_hourly_top (trigger: interval[1:00:00], next run at: 2025-06-30 10:25:55 UTC)" (scheduled at 2025-06-30 09:25:55.840421+00:00)
-2025-06-30 12:25:55 - INFO - Job "generate_hourly_top (trigger: interval[1:00:00], next run at: 2025-06-30 10:25:55 UTC)" executed successfully
-2025-06-30 12:26:43 - INFO - Job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 09:40:05 UTC)" executed successfully
-2025-06-30 12:40:05 - INFO - Running job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 09:55:05 UTC)" (scheduled at 2025-06-30 09:40:05.839932+00:00)
-2025-06-30 12:40:05 - INFO - Проверка цен на криптовалюты...
-2025-06-30 12:41:43 - INFO - Job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 09:55:05 UTC)" executed successfully
-2025-06-30 12:55:05 - INFO - Running job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 10:10:05 UTC)" (scheduled at 2025-06-30 09:55:05.839932+00:00)
-2025-06-30 12:55:05 - INFO - Проверка цен на криптовалюты...
-2025-06-30 12:56:44 - INFO - Job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 10:10:05 UTC)" executed successfully
-2025-06-30 13:10:05 - INFO - Running job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 10:25:05 UTC)" (scheduled at 2025-06-30 10:10:05.839932+00:00)
-2025-06-30 13:10:05 - INFO - Проверка цен на криптовалюты...
-2025-06-30 13:11:40 - INFO - Job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 10:25:05 UTC)" executed successfully
-2025-06-30 13:25:05 - INFO - Running job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 10:40:05 UTC)" (scheduled at 2025-06-30 10:25:05.839932+00:00)
-2025-06-30 13:25:05 - INFO - Проверка цен на криптовалюты...
-2025-06-30 13:25:55 - INFO - Running job "generate_hourly_top (trigger: interval[1:00:00], next run at: 2025-06-30 11:25:55 UTC)" (scheduled at 2025-06-30 10:25:55.840421+00:00)
-2025-06-30 13:25:55 - INFO - Job "generate_hourly_top (trigger: interval[1:00:00], next run at: 2025-06-30 11:25:55 UTC)" executed successfully
-2025-06-30 13:26:42 - INFO - Job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 10:40:05 UTC)" executed successfully
-2025-06-30 13:40:05 - INFO - Running job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 10:55:05 UTC)" (scheduled at 2025-06-30 10:40:05.839932+00:00)
-2025-06-30 13:40:05 - INFO - Проверка цен на криптовалюты...
-2025-06-30 13:41:45 - INFO - Job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 10:55:05 UTC)" executed successfully
-2025-06-30 13:55:05 - INFO - Running job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 11:10:05 UTC)" (scheduled at 2025-06-30 10:55:05.839932+00:00)
-2025-06-30 13:55:05 - INFO - Проверка цен на криптовалюты...
-2025-06-30 13:56:44 - INFO - Job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 11:10:05 UTC)" executed successfully
-2025-06-30 14:10:05 - INFO - Running job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 11:25:05 UTC)" (scheduled at 2025-06-30 11:10:05.839932+00:00)
-2025-06-30 14:10:05 - INFO - Проверка цен на криптовалюты...
-2025-06-30 14:11:43 - INFO - Job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 11:25:05 UTC)" executed successfully
-2025-06-30 14:25:05 - INFO - Running job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 11:40:05 UTC)" (scheduled at 2025-06-30 11:25:05.839932+00:00)
-2025-06-30 14:25:05 - INFO - Проверка цен на криптовалюты...
-2025-06-30 14:25:55 - INFO - Running job "generate_hourly_top (trigger: interval[1:00:00], next run at: 2025-06-30 12:25:55 UTC)" (scheduled at 2025-06-30 11:25:55.840421+00:00)
-2025-06-30 14:25:55 - INFO - Job "generate_hourly_top (trigger: interval[1:00:00], next run at: 2025-06-30 12:25:55 UTC)" executed successfully
-2025-06-30 14:26:44 - INFO - Job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 11:40:05 UTC)" executed successfully
-2025-06-30 14:40:05 - INFO - Running job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 11:55:05 UTC)" (scheduled at 2025-06-30 11:40:05.839932+00:00)
-2025-06-30 14:40:05 - INFO - Проверка цен на криптовалюты...
-2025-06-30 14:41:42 - INFO - Job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 11:55:05 UTC)" executed successfully
-2025-06-30 14:55:05 - INFO - Running job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 12:10:05 UTC)" (scheduled at 2025-06-30 11:55:05.839932+00:00)
-2025-06-30 14:55:05 - INFO - Проверка цен на криптовалюты...
-2025-06-30 14:56:44 - INFO - Job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 12:10:05 UTC)" executed successfully
-2025-06-30 15:10:05 - INFO - Running job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 12:25:05 UTC)" (scheduled at 2025-06-30 12:10:05.839932+00:00)
-2025-06-30 15:10:05 - INFO - Проверка цен на криптовалюты...
-2025-06-30 15:11:44 - INFO - Job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 12:25:05 UTC)" executed successfully
-2025-06-30 15:25:05 - INFO - Running job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 12:40:05 UTC)" (scheduled at 2025-06-30 12:25:05.839932+00:00)
-2025-06-30 15:25:05 - INFO - Проверка цен на криптовалюты...
-2025-06-30 15:25:55 - INFO - Running job "generate_hourly_top (trigger: interval[1:00:00], next run at: 2025-06-30 13:25:55 UTC)" (scheduled at 2025-06-30 12:25:55.840421+00:00)
-2025-06-30 15:25:55 - INFO - Job "generate_hourly_top (trigger: interval[1:00:00], next run at: 2025-06-30 13:25:55 UTC)" executed successfully
-2025-06-30 15:26:41 - INFO - Job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 12:40:05 UTC)" executed successfully
-2025-06-30 15:40:05 - INFO - Running job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 12:55:05 UTC)" (scheduled at 2025-06-30 12:40:05.839932+00:00)
-2025-06-30 15:40:05 - INFO - Проверка цен на криптовалюты...
-2025-06-30 15:41:42 - INFO - Job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 12:55:05 UTC)" executed successfully
-2025-06-30 15:55:05 - INFO - Running job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 13:10:05 UTC)" (scheduled at 2025-06-30 12:55:05.839932+00:00)
-2025-06-30 15:55:05 - INFO - Проверка цен на криптовалюты...
-2025-06-30 15:56:42 - INFO - Job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 13:10:05 UTC)" executed successfully
-2025-06-30 16:10:05 - INFO - Running job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 13:25:05 UTC)" (scheduled at 2025-06-30 13:10:05.839932+00:00)
-2025-06-30 16:10:05 - INFO - Проверка цен на криптовалюты...
-2025-06-30 16:11:43 - INFO - Job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 13:25:05 UTC)" executed successfully
-2025-06-30 16:25:05 - INFO - Running job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 13:40:05 UTC)" (scheduled at 2025-06-30 13:25:05.839932+00:00)
-2025-06-30 16:25:05 - INFO - Проверка цен на криптовалюты...
-2025-06-30 16:25:55 - INFO - Running job "generate_hourly_top (trigger: interval[1:00:00], next run at: 2025-06-30 14:25:55 UTC)" (scheduled at 2025-06-30 13:25:55.840421+00:00)
-2025-06-30 16:25:55 - INFO - Job "generate_hourly_top (trigger: interval[1:00:00], next run at: 2025-06-30 14:25:55 UTC)" executed successfully
-2025-06-30 16:26:42 - INFO - Job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 13:40:05 UTC)" executed successfully
-2025-06-30 16:40:05 - INFO - Running job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 13:55:05 UTC)" (scheduled at 2025-06-30 13:40:05.839932+00:00)
-2025-06-30 16:40:05 - INFO - Проверка цен на криптовалюты...
-2025-06-30 16:41:41 - INFO - Job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 13:55:05 UTC)" executed successfully
+2025-06-30 22:42:26 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-30 22:42:26 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-30 22:42:26 - INFO - Бот запущен
+2025-06-30 22:42:26 - INFO - Added job "check_price_changes" to job store "default"
+2025-06-30 22:42:26 - INFO - Added job "generate_hourly_top" to job store "default"
+2025-06-30 22:42:26 - INFO - Scheduler started
+2025-06-30 22:42:26 - INFO - Application started
+2025-06-30 22:42:36 - INFO - Running job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 19:57:36 UTC)" (scheduled at 2025-06-30 19:42:36.709564+00:00)
+2025-06-30 22:42:36 - INFO - Проверка цен на криптовалюты...
+2025-06-30 22:42:36 - INFO - Запрос к CoinGecko (страница 1)
+2025-06-30 22:42:37 - INFO - Запрос к CoinGecko (страница 2)
+2025-06-30 22:42:38 - INFO - Запрос к CoinGecko (страница 3)
+2025-06-30 22:43:15 - INFO - Job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 19:57:36 UTC)" executed successfully
+2025-06-30 22:43:26 - INFO - Running job "generate_hourly_top (trigger: interval[1:00:00], next run at: 2025-06-30 20:43:26 UTC)" (scheduled at 2025-06-30 19:43:26.710125+00:00)
+2025-06-30 22:43:26 - INFO - Job "generate_hourly_top (trigger: interval[1:00:00], next run at: 2025-06-30 20:43:26 UTC)" executed successfully
+2025-06-30 22:44:42 - INFO - Application is stopping. This might take a moment.
+2025-06-30 22:44:42 - INFO - Scheduler has been shut down
+2025-06-30 22:44:42 - INFO - Application.stop() complete
+2025-06-30 22:45:20 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-30 22:45:20 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-30 22:45:20 - INFO - Бот запущен
+2025-06-30 22:45:20 - INFO - Added job "check_price_changes" to job store "default"
+2025-06-30 22:45:20 - INFO - Added job "generate_hourly_top" to job store "default"
+2025-06-30 22:45:20 - INFO - Scheduler started
+2025-06-30 22:45:20 - INFO - Application started
+2025-06-30 22:45:30 - INFO - Running job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 20:00:30 UTC)" (scheduled at 2025-06-30 19:45:30.259323+00:00)
+2025-06-30 22:45:30 - INFO - Проверка цен на криптовалюты...
+2025-06-30 22:45:30 - INFO - Запрос к CoinGecko (страница 1)
+2025-06-30 22:45:30 - INFO - Запрос к CoinGecko (страница 2)
+2025-06-30 22:45:31 - INFO - Запрос к CoinGecko (страница 3)
+2025-06-30 22:46:08 - INFO - Job "check_price_changes (trigger: interval[0:15:00], next run at: 2025-06-30 20:00:30 UTC)" executed successfully
+2025-06-30 22:46:20 - INFO - Running job "generate_hourly_top (trigger: interval[1:00:00], next run at: 2025-06-30 20:46:20 UTC)" (scheduled at 2025-06-30 19:46:20.259826+00:00)
+2025-06-30 22:46:20 - INFO - Job "generate_hourly_top (trigger: interval[1:00:00], next run at: 2025-06-30 20:46:20 UTC)" executed successfully

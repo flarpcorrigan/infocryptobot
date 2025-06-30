@@ -5,12 +5,8 @@ from datetime import datetime, timezone
 from telegram.ext import Application, CommandHandler, ContextTypes
 
 import config
-from handlers import start, online, help_command, blacklist_command, status_command
+from handlers import start, online, help_command, blacklist_command, status_command, ping_command
 import utils
-
-# --- Логгер ---
-logger = logging.getLogger(__name__)
-logger.info("Бот запущен")
 
 # Глобальные переменные
 last_prices = {}
@@ -19,7 +15,7 @@ last_check_time = None
 
 # --- Запуск бота ---
 if __name__ == '__main__':
-    from telegram.ext import Application, ContextTypes
+    from telegram.ext import Application
 
     app = Application.builder().token(config.TELEGRAM_BOT_TOKEN).build()
 
@@ -29,6 +25,7 @@ if __name__ == '__main__':
     app.add_handler(CommandHandler("help", help_command))
     app.add_handler(CommandHandler("blacklist", blacklist_command))
     app.add_handler(CommandHandler("status", status_command))
+    app.add_handler(CommandHandler("ping", ping_command))
 
     # Регистрация задач
     job_queue = app.job_queue
