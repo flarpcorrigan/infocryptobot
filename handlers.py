@@ -14,7 +14,39 @@ async def start(update, context):
 
 
 async def online(update, context):
-    await update.message.reply_text("🟢 Бот работает!")
+    """Проверяет статус Binance через /time и выводит время сервера"""
+    try:
+        headers = {"User-Agent": "Mozilla/5.0"}
+        async with aiohttp.ClientSession(
+            connector=aiohttp.TCPConnector(ssl=False), headers=headers
+        ) as session:
+            # Проверка Binance
+            binance_ping = None
+            try:
+                async with session.get(f"{config.BINANCE_API_URL}/time", timeout=10) as r:
+                    if r.status == 200:
+                        server_time = (await r.json())["serverTime"] / 1000
+                        binance_time = datetime.fromtimestamp(server_time, tz=timezone.utc)
+                        binance_ping = f"🟢 Binance: {utils.format_time(binance_time)}"
+                    else:
+                        binance_ping = f"🔴 Binance: {r.status}"
+            except Exception as e:
+                binance_ping = f"🔴 Binance: {str(e)}"
+
+        # Собрать результат
+        message = f"""
+🟢 Бот работает!
+
+📡 Статус Binance:
+{binance_ping}
+
+🕒 Время сервера: {utils.get_local_time_str()}
+"""
+        await update.message.reply_text(message, parse_mode="HTML")
+
+    except Exception as e:
+        logger.error(f"Ошибка при выполнении /online: {e}")
+        await update.message.reply_text("❌ Не удалось получить статус Binance.")
 
 
 async def help_command(update, context):
@@ -22,10 +54,9 @@ async def help_command(update, context):
 📖 <b>Доступные команды:</b>
 
 /start — Приветствие
-/online — Проверка работы бота
+/online — Проверка работы и доступности Binance
 /help — Справка
 /status — Статус бота
-/ping — Диагностика подключения к API
 /blacklist — Показать чёрный список монет
 
 🔔 Уведомления о ценах:
@@ -93,53 +124,3 @@ async def status_command(update, context):
     except Exception as e:
         logger.error(f"Ошибка при выполнении /status: {e}")
         await update.message.reply_text("❌ Не удалось получить статус.")
-
-
-async def ping_command(update, context):
-    """Проверяет доступность API Binance и CoinGecko"""
-    try:
-        async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False)) as session:
-            # Проверка Binance
-            binance_ping = None
-            try:
-                async with session.get(f"{config.BINANCE_API_URL}/time", timeout=10) as r:
-                    if r.status == 200:
-                        server_time = (await r.json())["serverTime"] / 1000
-                        binance_time = datetime.fromtimestamp(server_time, tz=timezone.utc)
-                        binance_ping = f"🟢 Binance: {utils.format_time(binance_time)}"
-                    else:
-                        binance_ping = f"🔴 Binance: {r.status}"
-            except Exception as e:
-                binance_ping = f"🔴 Binance: {str(e)}"
-
-            # Проверка CoinGecko (реальный эндпоинт)
-            coingecko_ping = None
-            try:
-                url = " https://api.coingecko.com/api/v3/coins/markets "
-                params = {"vs_currency": "usd", "per_page": 1}
-                async with session.get(url, params=params, timeout=10) as r:
-                    if r.status == 200:
-                        data = await r.json()
-                        if isinstance(data, list) and len(data) > 0:
-                            coingecko_ping = "🟢 CoinGecko: доступен"
-                        else:
-                            coingecko_ping = "🔴 CoinGecko: пустой ответ"
-                    else:
-                        coingecko_ping = f"🔴 CoinGecko: {r.status}"
-            except Exception as e:
-                coingecko_ping = f"🔴 CoinGecko: {str(e)}"
-
-            # Отправляем результат
-            message = f"""
-📡 <b>Результат диагностики</b>
-
-{binance_ping}
-{coingecko_ping}
-
-🕒 Время сервера: {utils.get_local_time_str()}
-"""
-            await update.message.reply_text(message, parse_mode='HTML')
-    
-    except Exception as e:
-        logger.error(f"Ошибка при выполнении /ping: {e}")
-        await update.message.reply_text("❌ Не удалось выполнить диагностику.")
